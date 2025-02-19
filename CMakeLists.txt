@@ -1,0 +1,32 @@
+idf_component_register(
+    SRCS 
+        "main.c"
+        "display/st7262.c"
+        "display/gt911.c"
+        "display/lv_port.c"
+        "motor/servo42c.c"
+        "ui/ui_main.c"
+        "ui/ui_manual.c"
+        "ui/ui_auto.c"
+        "ui/ui_calibration.c"
+        "system/safety.c"
+        "system/motion_control.c"
+    INCLUDE_DIRS 
+        "."
+        "include"
+        "display"
+        "motor"
+        "ui"
+        "system"
+    REQUIRES 
+        driver
+        esp_timer
+        nvs_flash
+        lvgl
+        freertos
+        spi_flash
+        esp_system
+        esp_common
+        esp_rom
+        hal
+)
